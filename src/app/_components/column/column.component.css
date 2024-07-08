@@ -1,4 +1,3 @@
-/* card.component.css */
 .card-container {
   display: flex;
   flex-direction: column;
@@ -9,17 +8,17 @@
 
 .columns-container {
   display: flex;
-  flex-wrap: wrap; /* Ajuste para permitir que as colunas quebrem a linha conforme necessário */
+  flex-wrap: wrap; 
   justify-content: center;
-  width: 100%; /* Garante que o container das colunas ocupe toda a largura disponível */
+  width: 100%; 
 }
 
 .example-container {
   width: 350px;
   margin: 10px;
   height: auto;
-  flex: 1 1 300px; /* Define a largura mínima e máxima para as colunas */
-  max-width: 100%; /* Garante que a coluna não ultrapasse o card pai */
+  flex: 1 1 300px; 
+  max-width: 100%; 
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -47,8 +46,3 @@
   margin-left: auto;
 }
 
-.mat-button-with-icon {
-  font-size: 50px; /* Tamanho da fonte do ícone */
-  width: 36px; /* Largura do botão */
-  height: 36px; /* Altura do botão */
-}
