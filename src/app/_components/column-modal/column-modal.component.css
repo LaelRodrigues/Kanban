@@ -1,0 +1,6 @@
+/* add-column-modal.component.css */
+.mat-dialog-content {
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical apenas quando necessário */
+  max-height: 80vh; /* Define a altura máxima do conteúdo do modal em 80% da altura da viewport */
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura máxima do modal */
+}

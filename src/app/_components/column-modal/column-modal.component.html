@@ -1,0 +1,13 @@
+<!-- add-column-modal.component.html -->
+<h2 mat-dialog-title>Adicionar nova coluna</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Column Title" [(ngModel)]="columnTitle" />
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button color="primary" (click)="onConfirmClick()">
+      Confirm
+    </button>
+  </mat-dialog-actions>
+</mat-dialog-content>
