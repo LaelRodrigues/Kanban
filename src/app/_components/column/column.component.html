@@ -1,47 +1,43 @@
-<mat-card class="card-container">
-  <mat-card-content>
-    <div cdkDropListGroup class="columns-container">
-      @for (column of columns; track column; let columnIndex = $index) {
-      <mat-card class="example-container">
-        <div class="header-content">
-          <mat-card-title>{{ column.title }}</mat-card-title>
-          <button
-            mat-icon-button
-            color="primary"
-            class="add-button"
-            (click)="openAddTaskModal(columnIndex)"
-          >
-            <mat-icon>add</mat-icon>
-          </button>
-        </div>
-        <mat-card-content>
-          <div
-            cdkDropList
-            [cdkDropListData]="column.tasks"
-            class="example-list"
-            (cdkDropListDropped)="drop($event)"
-          >
-            @for (task of column.tasks; track task; let taskIndex = $index) {
-            <app-task
-              [task]="task"
-              [columnIndex]="columnIndex"
-              [taskIndex]="taskIndex"
-              (editTask)="editTask(columnIndex, taskIndex)"
-              (deleteTask)="deleteTask(columnIndex, taskIndex)"
-            ></app-task>
-            }
-          </div>
-        </mat-card-content>
-        <button mat-button color="warn" (click)="deleteColumn(columnIndex)">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-card>
-      }
+<div cdkDropListGroup class="columns-container">
+  @for (column of columns; track column; let columnIndex = $index) {
+  <mat-card class="example-container">
+    <div class="header-content">
+      <mat-card-title>{{ column.title }}</mat-card-title>
+      <button
+        mat-icon-button
+        color="primary"
+        class="add-button"
+        (click)="openAddTaskModal(columnIndex)"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
     </div>
-  </mat-card-content>
-  <mat-card-actions class="add-column-button">
-    <button mat-raised-button color="primary" (click)="openAddColumnModal()">
-      Add Column
+    <mat-card-content>
+      <div
+        cdkDropList
+        [cdkDropListData]="column.tasks"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        @for (task of column.tasks; track task; let taskIndex = $index) {
+        <app-task
+          [task]="task"
+          [columnIndex]="columnIndex"
+          [taskIndex]="taskIndex"
+          (editTask)="editTask(columnIndex, taskIndex)"
+          (deleteTask)="deleteTask(columnIndex, taskIndex)"
+        ></app-task>
+        }
+      </div>
+    </mat-card-content>
+    <button mat-button color="warn" (click)="deleteColumn(columnIndex)">
+      <mat-icon>close</mat-icon>
     </button>
-  </mat-card-actions>
-</mat-card>
+  </mat-card>
+  }
+</div>
+<mat-card-actions class="add-column-button">
+  <button mat-raised-button color="primary" (click)="openAddColumnModal()">
+    Nova Coluna
+  </button>
+</mat-card-actions>
