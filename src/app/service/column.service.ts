@@ -10,15 +10,20 @@ export class ColumnService {
     {
       title: 'A fazer',
       tasks: [
-        { title: 'Criar Layout Base', description: 'Desenvolver o esqueleto da interface de usuário usando HTML e CSS', date: new Date('2024-07-01') },
-        { title: 'Definir Estrutura do Projeto', description: ' Estabelecer a arquitetura de pastas e módulos da aplicação front-end', date: new Date('2024-07-02') }
+        { title: 'Estilizar Componentes', description: ' Refinar estilos CSS/SCSS dos componentes', date: new Date('2024-06-29') }
       ]
     },
     {
       title: 'Fazendo',
       tasks: [
+        { title: 'Criar Layout Base', description: 'Desenvolver o esqueleto da interface de usuário usando HTML e CSS', date: new Date('2024-07-01') },
         { title: 'Desenvolver Página Inicial', description: 'Implementar a página inicial da aplicação ', date: new Date('2024-06-30') },
-        { title: 'Estilizar Componentes', description: ' Refinar estilos CSS/SCSS dos componentes', date: new Date('2024-06-29') }
+      ]
+    },
+    {
+      title: 'Feito',
+      tasks: [
+        { title: 'Definir Estrutura do Projeto', description: ' Estabelecer a arquitetura de pastas e módulos da aplicação front-end', date: new Date('2024-07-02') }
       ]
     }
   ];
